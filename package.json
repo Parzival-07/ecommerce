@@ -1,0 +1,20 @@
+{
+  "name": "your-ecommerce-store",
+  "version": "1.0.0",
+  "description": "Complete e-commerce platform for selling products online",
+  "scripts": {
+    "install:all": "npm install && cd web && npm install && cd ../mobile && npm install && cd ../admin && npm install && cd ../functions && npm install",
+    "dev:web": "cd web && npm start",
+    "dev:admin": "cd admin && npm start", 
+    "dev:mobile": "cd mobile && expo start",
+    "build:web": "cd web && npm run build",
+    "build:admin": "cd admin && npm run build",
+    "deploy:web": "cd web && npm run build && firebase deploy --only hosting:web",
+    "deploy:admin": "cd admin && npm run build && firebase deploy --only hosting:admin",
+    "deploy:functions": "cd functions && npm run deploy",
+    "setup": "npm run install:all && firebase init"
+  },
+  "keywords": ["ecommerce", "react", "firebase", "stripe", "online-store"],
+  "author": "Parzival-07",
+  "license": "MIT"
+}
